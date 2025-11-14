@@ -1,0 +1,39 @@
+# 🧪 Final Task – SauceDemo Login Tests
+
+## 🔍 Overview
+Automated login form tests for [saucedemo.com](https://www.saucedemo.com) using **Selenium WebDriver** + **NUnit**.
+
+Tests follow **Page Object Model (POM)** and support **parallel run** + **data-driven** testing.
+
+---
+
+## 🧠 Test Cases
+
+### UC-1: Empty Credentials
+- Type username/password → clear → click login  
+✅ Expect: *"Epic sadface: Username is required"*
+
+### UC-2: Empty Password
+- Type username/password → clear password → click login  
+✅ Expect: *"Epic sadface: Password is required"*
+
+### UC-3: Valid Credentials
+- Username: `standard_user` / `performance_glitch_user`  
+- Password: `secret_sauce`  
+✅ Expect: *Dashboard title = "Swag Labs"*
+
+---
+
+## ⚙️ Tools
+- C#, .NET 8  
+- Selenium WebDriver  
+- NUnit (Parallel Execution + TestCase Data)  
+- Optional: Log4Net, Abstract Factory Pattern  
+
+---
+
+## ▶️ Run Tests
+```bash
+dotnet restore
+dotnet build
+dotnet test
